@@ -1,11 +1,15 @@
 name: Python application
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
   
 name: Create release
 
 jobs:
   build:
+    name: Create release
     runs-on: ubuntu-latest
     steps:
     - name: Create github release
